@@ -1,14 +1,8 @@
 ---
 type: ProjectFeedLayout
 title: Projects
-colors: colors-a
-backgroundImage:
-  type: BackgroundImage
-  url: /images/bg1.jpg
-  backgroundSize: cover
-  backgroundPosition: center
-  backgroundRepeat: no-repeat
-  opacity: 50
+colors: colors-f
+# Clean, minimal background
 projectFeed:
   type: ProjectFeedSection
   colors: colors-f

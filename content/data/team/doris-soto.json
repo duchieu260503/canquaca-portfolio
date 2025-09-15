@@ -1,10 +1,10 @@
 {
     "type": "Person",
-    "firstName": "Doris",
-    "lastName": "Soto",
+    "firstName": "Hieu",
+    "lastName": "Pham",
     "image": {
         "type": "ImageBlock",
         "url": "/images/about.jpg",
-        "altText": "Doris Soto photo"
+        "altText": "Hieu Pham photo"
     }
 }

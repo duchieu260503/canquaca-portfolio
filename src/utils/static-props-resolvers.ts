@@ -61,8 +61,13 @@ const PropsResolvers: Partial<Record<ContentObjectType, ResolverFunction>> = {
         const allProjects = getAllProjectsSorted(allData);
         const currentProjectId = props.__metadata?.id;
         const currentProjectIndex = allProjects.findIndex((project) => project.__metadata?.id === currentProjectId);
-        const nextProject = currentProjectIndex > 0 ? allProjects[currentProjectIndex - 1] : null;
-        const prevProject = currentProjectIndex < allProjects.length - 1 ? allProjects[currentProjectIndex + 1] : null;
+
+        // Always show 2 recommendations by wrapping around
+        const prevProject = allProjects.length > 1 ?
+            allProjects[currentProjectIndex > 0 ? currentProjectIndex - 1 : allProjects.length - 1] : null;
+        const nextProject = allProjects.length > 1 ?
+            allProjects[currentProjectIndex < allProjects.length - 1 ? currentProjectIndex + 1 : 0] : null;
+
         return {
             ...props,
             prevProject,

@@ -1,29 +1,80 @@
 ---
 type: ProjectLayout
-title: Another cool project
-colors: colors-a
-date: '2021-12-20'
-client: Awesome client
+title: Flood Detection System Using Image Segmentation
+colors: colors-f
+date: '2024-12-01'
+client: Personal Project
 description: >-
-  It’s hard to imagine that I’ve that I wrote all this code by myself, probably because I worked with an entire team :) but they definitely followed my lead most of the time.
+  A real-time water level detection system using YOLOv8n semantic segmentation to automatically detect water areas and measure water levels in images/videos for flood monitoring and early warning systems.
 featuredImage:
   type: ImageBlock
-  url: /images/bg2.jpg
-  altText: Project thumbnail image
+  url: /images/projects/water.webp
+  altText: AI flood detection system showing water level monitoring interface
 media:
-  type: ImageBlock
-  url: /images/bg2.jpg
-  altText: Project image
+  type: VideoBlock
+  url: /images/projects/water.mp4
+  altText: YOLOv8n model detecting water areas and measuring real-time water levels
+  caption: Real-time flood detection system in action - showing water area detection and level measurement
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. Curabitur at auctor sapien. Etiam at cursus enim. Suspendisse sed augue tortor. Nunc eu magna vitae lorem pellentesque fermentum. Sed in facilisis dui. Nulla molestie risus in mi dapibus, eget porta lorem semper. Donec sed facilisis nibh. Curabitur eget dui in libero euismod commodo nec sit amet est. Etiam id ipsum aliquam, vehicula erat sit amet, consequat tortor.
+## Project Overview
 
-Etiam facilisis lacus nec pretium lobortis. Praesent dapibus justo non efficitur efficitur. Nullam viverra justo arcu, eget egestas tortor pretium id. Sed imperdiet mattis eleifend. Vivamus suscipit et neque imperdiet venenatis. In malesuada sed urna eget vehicula. Donec fermentum tortor sit amet nisl elementum fringilla. Pellentesque dapibus suscipit faucibus. Nullam malesuada sed urna quis rutrum. Donec facilisis lorem id maximus mattis. Vestibulum quis elit magna. Vestibulum accumsan blandit consequat. Phasellus quis posuere quam.
+This AI-powered flood detection system leverages computer vision and machine learning to provide real-time water level monitoring. Using a custom-trained YOLOv8n semantic segmentation model, the system can automatically detect water areas in images and videos, then calculate precise water levels using geometric analysis and pixel-to-meter conversion.
 
-> “Everybody should learn to program a computer, because it teaches you how to think.”
+## Key Features
 
-Vestibulum ullamcorper risus auctor eleifend consequat. Vivamus mollis in tellus ac ullamcorper. Vestibulum sit amet bibendum ipsum, vitae rutrum ex. Nullam cursus, urna et dapibus aliquam, urna leo euismod metus, eu luctus justo mi eget mauris. Proin felis leo, volutpat et purus in, lacinia luctus eros. Pellentesque lobortis massa scelerisque lorem ullamcorper, sit amet elementum nulla scelerisque. In volutpat efficitur nulla, aliquam ornare lectus ultricies ac. Mauris sagittis ornare dictum. Nulla vel felis ut purus fermentum pretium. Sed id lectus ac diam aliquet venenatis. Etiam ac auctor enim. Nunc velit mauris, viverra vel orci ut, egestas rhoncus diam. Morbi scelerisque nibh tellus, vel varius urna malesuada sed. Etiam ultricies sem consequat, posuere urna non, maximus ex. Mauris gravida diam sed augue condimentum pulvinar vel ac dui. Integer vel convallis justo.
+- **Real-time Water Detection**: YOLOv8n semantic segmentation for accurate water area identification
+- **Water Level Measurement**: Precise calculation using reference lines and pixel-to-meter conversion
+- **Interactive GUI**: User-friendly Tkinter interface for easy operation
+- **Video Processing**: Real-time processing with output video generation
+- **Configurable Parameters**: Customizable warning thresholds and measurement settings
+- **Pre-trained Model**: Included `best.pt` model trained on custom dataset
 
-Nam rutrum magna sed pellentesque lobortis. Etiam quam mauris, iaculis eget ex ac, rutrum scelerisque nisl. Cras finibus dictum ex sed tincidunt. Morbi facilisis neque porta, blandit mauris quis, pharetra odio. Aliquam dictum quam quis elit auctor, at vestibulum ex pulvinar. Quisque lobortis a lectus quis faucibus. Nulla vitae pellentesque nibh, et fringilla erat. Praesent placerat ac est at tincidunt. Praesent ultricies a ex at ultrices. Etiam sed tincidunt elit. Nulla sagittis neque neque, ultrices dignissim sapien pellentesque faucibus. Donec tempor orci sed consectetur dictum. Ut viverra ut enim ac semper. Integer lacinia sem in arcu tempor faucibus eget non urna. Praesent vel nunc eu libero aliquet interdum non vitae elit. Maecenas pharetra ipsum dolor, et iaculis elit ornare ac.
+## Technologies Used
 
-Aenean scelerisque ullamcorper est aliquet blandit. Donec ac tellus enim. Vivamus quis leo mattis, varius arcu at, convallis diam. Donec ac leo at nunc viverra molestie ac viverra nisi. Proin interdum at turpis at varius. Nunc sit amet ex suscipit, convallis ligula eu, pretium turpis. Sed ultricies neque vel mi malesuada, et mollis risus lobortis. Sed condimentum venenatis mauris, id elementum dolor gravida ac. Sed sodales tempus neque, quis iaculis arcu tincidunt ut. Donec vitae faucibus dui. In hac habitasse platea dictumst. Donec erat ex, ullamcorper a massa a, porttitor porta ligula.
+- **AI/ML**: YOLOv8n semantic segmentation, Ultralytics
+- **Computer Vision**: OpenCV, image processing libraries
+- **GUI Development**: Tkinter for user interface
+- **Data Processing**: Shapely for geometric calculations
+- **Data Labeling**: Roboflow for dataset preparation
+- **Version Control**: Git with comprehensive documentation
+
+## Technical Implementation
+
+The system combines multiple technical approaches:
+
+1. **Model Training**: Custom dataset from Kaggle combined with self-labeled data using Roboflow
+2. **Water Detection**: YOLOv8n model processes each frame to identify water areas
+3. **Level Calculation**: Geometric intersection algorithms calculate water height using reference lines
+4. **Real-time Processing**: Live video stream analysis with immediate results
+5. **Output Generation**: Processed videos saved locally for analysis
+
+## Challenges & Solutions
+
+The primary challenge was achieving accurate water level measurements from 2D images. I solved this by implementing a reference line system where users provide perpendicular line coordinates, enabling precise pixel-to-meter conversion. The geometric intersection algorithms handle the complex calculations needed for accurate water level determination.
+
+> "The intersection of AI and environmental monitoring creates powerful tools for disaster prevention and public safety."
+
+## Results
+
+- **8 GitHub stars** and active community engagement
+- **30 commits** showing consistent development and improvement
+- **Real-time processing** capability for live flood monitoring
+- **Accurate measurements** using geometric analysis
+- **Open-source availability** for community contribution and improvement
+
+## Future Development
+
+Current limitations include single-area detection per frame and intersection calculation challenges with multiple water areas. Future updates will focus on:
+- Multi-area water detection capabilities
+- Improved intersection algorithms for complex scenarios
+- Enhanced accuracy with better reference line selection
+- Integration with IoT sensors for automated monitoring
+
+## Repository
+
+**GitHub**: [duchieu260503/Flood-detection](https://github.com/duchieu260503/Flood-detection)
+- Complete source code and documentation
+- Pre-trained model included
+- Setup instructions and requirements
+- Example media files for testing

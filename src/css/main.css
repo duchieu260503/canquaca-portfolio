@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,500;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap')
-layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,500;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap') layer(base);
 
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
 @theme {
     --font-body: var(--theme-font-body, monospace);
-    --background-color-main: var(--theme-dark);
-    --background-color-inverse: var(--theme-on-dark);
-    --text-color-main: var(--theme-on-dark);
-    --text-color-inverse: var(--theme-dark);
+    --background-color-main: #1a1a1a;
+    --background-color-inverse: #ffffff;
+    --text-color-main: #ffffff;
+    --text-color-inverse: #1a1a1a;
     --container-8xl: 96rem;
     --spacing-icon: 1em;
 }
@@ -18,10 +17,399 @@ layer(base);
     html {
         @apply antialiased font-body;
     }
+
+    /* Dark theme for better readability */
+    body {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        min-height: 100vh;
+        color: #ffffff;
+    }
+
+    /* Dark section backgrounds with good contrast */
+    .section {
+        background: rgba(45, 45, 45, 0.95);
+        backdrop-filter: blur(10px);
+        color: #ffffff;
+    }
+
+    /* Ensure text is readable on dark background */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #ffffff !important;
+    }
+
+    p,
+    span,
+    div,
+    a,
+    li {
+        color: #e5e5e5 !important;
+    }
+
+    /* Links should be more visible */
+    a {
+        color: #60a5fa !important;
+    }
+
+    a:hover {
+        color: #93c5fd !important;
+    }
+
+    /* Simple Black Background Code Styling */
+    code:not(pre code) {
+        background: #000000 !important;
+        color: #00ff00 !important;
+        padding: 3px 8px !important;
+        border-radius: 4px !important;
+        font-size: 0.9em !important;
+        font-family: 'Courier New', 'Monaco', 'Consolas', monospace !important;
+        font-weight: normal !important;
+        border: 1px solid #333333 !important;
+    }
+
+    pre {
+        background: #000000 !important;
+        color: #ffffff !important;
+        padding: 20px !important;
+        border-radius: 8px !important;
+        border: 1px solid #333333 !important;
+        overflow-x: auto !important;
+        font-family: 'Courier New', 'Monaco', 'Consolas', monospace !important;
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        margin: 20px 0 !important;
+        position: relative !important;
+    }
+
+    pre code {
+        background: #000000 !important;
+        color: #ffffff !important;
+        padding: 0 !important;
+        border: none !important;
+        font-size: inherit !important;
+        border-radius: 0 !important;
+        font-weight: normal !important;
+    }
+
+    /* Force all elements inside pre to have black background */
+    pre * {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+
+    /* Force all code elements to have black background */
+    pre code * {
+        background: #000000 !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        color: #ffffff !important;
+    }
+
+    /* Force all tokens to have black background */
+    pre code .token {
+        background: #000000 !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        color: #ffffff !important;
+    }
+
+    /* Simple Syntax Highlighting for Black Background */
+    pre code .token.keyword {
+        color: #00ffff !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.string {
+        color: #00ff00 !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.number {
+        color: #ffff00 !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.comment {
+        color: #808080 !important;
+        background: #000000 !important;
+        font-style: italic !important;
+    }
+
+    pre code .token.class-name {
+        color: #ff00ff !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.function {
+        color: #ff8000 !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.operator {
+        color: #ffffff !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.punctuation {
+        color: #c0c0c0 !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.boolean {
+        color: #00ffff !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.null {
+        color: #ff0000 !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.undefined {
+        color: #ff0000 !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.variable {
+        color: #00bfff !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.property {
+        color: #00bfff !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.tag {
+        color: #ff8000 !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.attr-name {
+        color: #ff00ff !important;
+        background: #000000 !important;
+    }
+
+    pre code .token.attr-value {
+        color: #00ff00 !important;
+        background: #000000 !important;
+    }
+
+    /* Simple Code Block Titles */
+    .code-title {
+        background: #333333 !important;
+        color: #ffffff !important;
+        padding: 10px 16px !important;
+        border-radius: 8px 8px 0 0 !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+        text-transform: none !important;
+        letter-spacing: 0.5px !important;
+        border: 1px solid #555555 !important;
+        border-bottom: none !important;
+        margin: 20px 0 0 0 !important;
+        font-family: 'Courier New', 'Monaco', 'Consolas', monospace !important;
+    }
+
+    .code-title+pre {
+        border-radius: 0 0 8px 8px !important;
+        margin-top: 0 !important;
+        border-top: none !important;
+    }
+
+    /* Simple inline code - only for code NOT inside pre blocks */
+    p code,
+    li code,
+    div code:not(pre code) {
+        background: #000000 !important;
+        color: #00ff00 !important;
+        padding: 3px 8px !important;
+        border-radius: 4px !important;
+        font-size: 0.9em !important;
+        font-family: 'Courier New', 'Monaco', 'Consolas', monospace !important;
+        font-weight: normal !important;
+        border: 1px solid #333333 !important;
+    }
+
+    /* Simple scrollbar */
+    pre::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    pre::-webkit-scrollbar-track {
+        background: #333333;
+        border-radius: 4px;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+        background: #666666;
+        border-radius: 4px;
+    }
+
+    pre::-webkit-scrollbar-thumb:hover {
+        background: #888888;
+    }
+
+    /* Responsive code blocks */
+    @media (max-width: 768px) {
+        pre {
+            padding: 16px !important;
+            font-size: 13px !important;
+            margin: 20px 0 !important;
+            border-radius: 8px !important;
+        }
+
+        .code-title {
+            font-size: 12px !important;
+            padding: 10px 16px !important;
+            border-radius: 8px 8px 0 0 !important;
+        }
+
+        .code-title+pre {
+            border-radius: 0 0 8px 8px !important;
+        }
+
+        code:not(pre code) {
+            padding: 2px 6px !important;
+            font-size: 0.85em !important;
+        }
+    }
+
+    /* Ensure buttons and form elements are visible */
+    button,
+    input,
+    textarea,
+    select {
+        background-color: #374151 !important;
+        color: #ffffff !important;
+        border-color: #6b7280 !important;
+    }
+
+    /* Compact page layout */
+    .hero-section {
+        min-height: 60vh !important;
+    }
+
+    .section {
+        margin-bottom: 0 !important;
+    }
+
+    /* Remove excessive spacing */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Aesthetic CV Download Button */
+    #cv-download-btn {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border-radius: 8px !important;
+        padding: 12px 24px !important;
+        font-weight: 500 !important;
+        font-size: 16px !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        transition: all 0.3s ease !important;
+        backdrop-filter: blur(10px) !important;
+    }
+
+    #cv-download-btn:hover {
+        background: rgba(255, 255, 255, 0.2) !important;
+        border-color: rgba(255, 255, 255, 0.3) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    #cv-download-btn:active {
+        transform: translateY(0) !important;
+    }
+
+
+    /* Secondary button styling */
+    #projects-btn,
+    #blogs-btn,
+    a[href="/projects"],
+    a[href="/blog"] {
+        background: transparent !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 8px !important;
+        padding: 12px 24px !important;
+        font-weight: 500 !important;
+        font-size: 16px !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        transition: all 0.3s ease !important;
+        margin: 0 8px !important;
+    }
+
+    #projects-btn:hover,
+    #blogs-btn:hover,
+    a[href="/projects"]:hover,
+    a[href="/blog"]:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+        color: #ffffff !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    /* Center the action buttons */
+    .hero-section .actions {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+        margin-top: 24px !important;
+    }
+
+    /* Ensure buttons are centered on mobile */
+    @media (max-width: 768px) {
+        .hero-section .actions {
+            flex-direction: column !important;
+            gap: 16px !important;
+        }
+
+        #cv-download-btn,
+        #projects-btn,
+        #blogs-btn {
+            width: 200px !important;
+            justify-content: center !important;
+        }
+    }
+
+    /* About page CV buttons */
+    #cv-download-about:hover {
+        background: rgba(255, 255, 255, 0.2) !important;
+        border-color: rgba(255, 255, 255, 0.3) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    #resume-download-about:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+        color: #ffffff !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    }
+
     body {
         @apply flex flex-col min-h-screen;
     }
-    body > div {
+
+    body>div {
         @apply flex flex-col grow;
     }
 
@@ -54,6 +442,7 @@ layer(base);
             6px 6px,
             6px 6px;
     }
+
     option {
         color: initial;
     }
@@ -65,24 +454,28 @@ layer(base);
         --text-color-main: var(--theme-on-light);
         --text-color-inverse: var(--theme-light);
     }
+
     :where([data-theme='colors-c']) {
         --background-color-main: var(--theme-primary);
         --background-color-inverse: var(--theme-on-primary);
         --text-color-main: var(--theme-on-primary);
         --text-color-inverse: var(--theme-primary);
     }
+
     :where([data-theme='colors-d']) {
         --background-color-main: var(--theme-secondary);
         --background-color-inverse: var(--theme-on-secondary);
         --text-color-main: var(--theme-on-secondary);
         --text-color-inverse: var(--theme-secondary);
     }
+
     :where([data-theme='colors-e']) {
         --background-color-main: var(--theme-complementary);
         --background-color-inverse: var(--theme-on-complementary);
         --text-color-main: var(--theme-on-complementary);
         --text-color-inverse: var(--theme-complementary);
     }
+
     :where([data-theme^='colors-']):not([data-theme='colors-f']) {
         @apply bg-main text-main;
     }
@@ -91,9 +484,11 @@ layer(base);
     form data:has([class*='sm:col-span-2']) {
         @apply sm:col-span-2;
     }
+
     nav data:has([class*='sm:col-start-2']) {
         @apply sm:col-start-2;
     }
+
     li data:has([class*='link-fill']) {
         @apply inline-flex;
     }
@@ -146,11 +541,9 @@ layer(base);
 
 @utility link-fill {
     @apply transition-all text-main;
-    background-image: linear-gradient(
-        to bottom,
-        var(--background-color-inverse) 0%,
-        var(--background-color-inverse) 100%
-    );
+    background-image: linear-gradient(to bottom,
+            var(--background-color-inverse) 0%,
+            var(--background-color-inverse) 100%);
     background-size: 100% 0%;
     background-repeat: no-repeat;
 

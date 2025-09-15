@@ -1,29 +1,63 @@
 ---
 type: ProjectLayout
-title: A very cool code project
+title: Customer Relationship Management System
 colors: colors-a
-date: '2021-10-15'
-client: Awesome client
+date: '2025-08-15'
+client: Viettel CX
 description: >-
-  It’s hard to imagine that I’ve that I wrote all this code by myself, probably because I worked with an entire team :) but they definitely followed my lead most of the time.
+  A full-stack Java Spring Boot CRM application with MySQL, Spring Security, and Thymeleaf, enabling role-based access, client management, and contract workflows for improved cross-team coordination.
 featuredImage:
   type: ImageBlock
-  url: /images/bg1.jpg
-  altText: Project thumbnail image
+  url: /images/projects/CRM.png
+  altText: CRM system dashboard showing client management interface
 media:
   type: ImageBlock
-  url: /images/bg1.jpg
-  altText: Project image
+  url: /images/projects/CRM.png
+  altText: Customer Relationship Management system with role-based access control
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. Curabitur at auctor sapien. Etiam at cursus enim. Suspendisse sed augue tortor. Nunc eu magna vitae lorem pellentesque fermentum. Sed in facilisis dui. Nulla molestie risus in mi dapibus, eget porta lorem semper. Donec sed facilisis nibh. Curabitur eget dui in libero euismod commodo nec sit amet est. Etiam id ipsum aliquam, vehicula erat sit amet, consequat tortor.
+## Project Overview
 
-Etiam facilisis lacus nec pretium lobortis. Praesent dapibus justo non efficitur efficitur. Nullam viverra justo arcu, eget egestas tortor pretium id. Sed imperdiet mattis eleifend. Vivamus suscipit et neque imperdiet venenatis. In malesuada sed urna eget vehicula. Donec fermentum tortor sit amet nisl elementum fringilla. Pellentesque dapibus suscipit faucibus. Nullam malesuada sed urna quis rutrum. Donec facilisis lorem id maximus mattis. Vestibulum quis elit magna. Vestibulum accumsan blandit consequat. Phasellus quis posuere quam.
+This Customer Relationship Management (CRM) platform was built as a comprehensive solution for Viettel CX to enable admins, managers, and employees to manage clients, contracts, and workflows in one centralized system. The project significantly improved cross-team coordination and reduced manual errors.
 
-> “Everybody should learn to program a computer, because it teaches you how to think.”
+## Key Features
 
-Vestibulum ullamcorper risus auctor eleifend consequat. Vivamus mollis in tellus ac ullamcorper. Vestibulum sit amet bibendum ipsum, vitae rutrum ex. Nullam cursus, urna et dapibus aliquam, urna leo euismod metus, eu luctus justo mi eget mauris. Proin felis leo, volutpat et purus in, lacinia luctus eros. Pellentesque lobortis massa scelerisque lorem ullamcorper, sit amet elementum nulla scelerisque. In volutpat efficitur nulla, aliquam ornare lectus ultricies ac. Mauris sagittis ornare dictum. Nulla vel felis ut purus fermentum pretium. Sed id lectus ac diam aliquet venenatis. Etiam ac auctor enim. Nunc velit mauris, viverra vel orci ut, egestas rhoncus diam. Morbi scelerisque nibh tellus, vel varius urna malesuada sed. Etiam ultricies sem consequat, posuere urna non, maximus ex. Mauris gravida diam sed augue condimentum pulvinar vel ac dui. Integer vel convallis justo.
+- **Role-Based Access Control**: Secure authentication system distinguishing between admins, managers, and employees
+- **Contract Management Module**: Distinguished between "in-progress" and "done-deal" contracts while maintaining shared attributes
+- **Client Management**: Centralized client database with comprehensive tracking capabilities
+- **Workflow Management**: Streamlined processes for team collaboration
+- **Responsive Interface**: Optimized front-end with Thymeleaf HTML, Tailwind CSS, and JavaScript
 
-Nam rutrum magna sed pellentesque lobortis. Etiam quam mauris, iaculis eget ex ac, rutrum scelerisque nisl. Cras finibus dictum ex sed tincidunt. Morbi facilisis neque porta, blandit mauris quis, pharetra odio. Aliquam dictum quam quis elit auctor, at vestibulum ex pulvinar. Quisque lobortis a lectus quis faucibus. Nulla vitae pellentesque nibh, et fringilla erat. Praesent placerat ac est at tincidunt. Praesent ultricies a ex at ultrices. Etiam sed tincidunt elit. Nulla sagittis neque neque, ultrices dignissim sapien pellentesque faucibus. Donec tempor orci sed consectetur dictum. Ut viverra ut enim ac semper. Integer lacinia sem in arcu tempor faucibus eget non urna. Praesent vel nunc eu libero aliquet interdum non vitae elit. Maecenas pharetra ipsum dolor, et iaculis elit ornare ac.
+## Technologies Used
 
-Aenean scelerisque ullamcorper est aliquet blandit. Donec ac tellus enim. Vivamus quis leo mattis, varius arcu at, convallis diam. Donec ac leo at nunc viverra molestie ac viverra nisi. Proin interdum at turpis at varius. Nunc sit amet ex suscipit, convallis ligula eu, pretium turpis. Sed ultricies neque vel mi malesuada, et mollis risus lobortis. Sed condimentum venenatis mauris, id elementum dolor gravida ac. Sed sodales tempus neque, quis iaculis arcu tincidunt ut. Donec vitae faucibus dui. In hac habitasse platea dictumst. Donec erat ex, ullamcorper a massa a, porttitor porta ligula.
+- **Backend**: Java Spring Boot, Spring Security
+- **Frontend**: Thymeleaf HTML, Tailwind CSS, JavaScript
+- **Database**: MySQL
+- **Testing**: Automated testing with CI/CD pipelines
+- **Deployment**: Docker containers
+
+## Challenges & Solutions
+
+The biggest challenge was designing a contract management system that could handle different contract states while maintaining data integrity. I solved this by creating a flexible state machine that allows smooth transitions between contract phases while preserving shared attributes.
+
+> "The key to building great CRM systems is understanding that every workflow decision impacts team productivity and data accuracy."
+
+## Results
+
+- **30% reduction** in manual errors through automated contract state management
+- **20% decrease** in task completion time for managers through optimized UI
+- **Improved cross-team coordination** with centralized client and contract management
+- **Enhanced data integrity** with proper state management and validation
+
+## Repository
+
+**GitHub**: [duchieu260503/crm](https://github.com/duchieu260503/crm)
+- Complete Spring Boot application with Maven configuration
+- Docker containerization for easy deployment
+- MIT License - open source and freely available
+- 6 commits showing active development
+- Multi-language codebase: HTML (59.3%), JavaScript (23.5%), Java (15.6%), CSS (1.5%)
+
+## Lessons Learned
+
+This project taught me the importance of understanding business workflows when building enterprise applications. The integration of role-based access control and state management gave me valuable experience in building scalable, secure applications that serve multiple user types effectively.

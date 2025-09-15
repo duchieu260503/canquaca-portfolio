@@ -1,25 +1,16 @@
 ---
 type: PageLayout
 title: Home
-colors: colors-a
-backgroundImage:
-  type: BackgroundImage
-  url: /images/bg1.jpg
-  backgroundSize: cover
-  backgroundPosition: center
-  backgroundRepeat: no-repeat
-  opacity: 75
+colors: colors-f
+# Clean, minimal background
 sections:
   - elementId: ''
     colors: colors-f
     backgroundSize: full
     title: >-
-      I’m a developer, digital artist, consultant and a bunch of other
-      impressive titles and buzz words.
+      Hi, I'm Hieu Pham - a passionate software engineer and data enthusiast.
     subtitle: >-
-      This is my info—I’m sharing it all this with ya’ll to impress you with all
-      the hard work I’ve done in the past few years. Once you’re impressed, you
-      can continue to scroll down to see more details and credentials about me.
+      Welcome to my digital space! I'm a passionate software engineer and data enthusiast with a deep fascination for turning complex problems into elegant solutions. Based in Fort Worth, TX, I'm pursuing my B.S. in Data Science with minors in Mathematics at Texas Christian University, maintaining a 3.9 GPA. My journey in technology spans from full-stack development to advanced data science and machine learning. I'm driven by the intersection of code and data, where I can build robust systems that not only work efficiently but also provide meaningful insights. Explore my projects and let's connect to discuss how we can work together.
     styles:
       self:
         height: auto
@@ -30,14 +21,29 @@ sections:
           - ml-0
           - mr-0
         padding:
-          - pt-36
-          - pb-48
+          - pt-16
+          - pb-16
           - pl-4
           - pr-4
         flexDirection: row-reverse
-        textAlign: left
+        textAlign: center
     type: HeroSection
-    actions: []
+    actions:
+      - type: Link
+        label: '📄 Download CV'
+        url: '/files/Hieu_Pham_CV.pdf'
+        style: 'primary'
+        elementId: 'cv-download-btn'
+      - type: Link
+        label: '🚀 View Projects'
+        url: '/projects'
+        style: 'secondary'
+        elementId: 'projects-btn'
+      - type: Link
+        label: '📝 View Blogs'
+        url: '/blog'
+        style: 'secondary'
+        elementId: 'blogs-btn'
   - colors: colors-f
     type: FeaturedProjectsSection
     elementId: ''
@@ -59,8 +65,8 @@ sections:
         height: auto
         width: wide
         padding:
-          - pt-24
-          - pb-24
+          - pt-12
+          - pb-12
           - pl-4
           - pr-4
         textAlign: left
@@ -76,9 +82,9 @@ sections:
         label: See all posts
         url: /blog
     posts:
-      - content/pages/blog/post-six.md
-      - content/pages/blog/post-four.md
-      - content/pages/blog/post-three.md
+      - content/pages/blog/post-one.md
+      - content/pages/blog/dsa-guide.md
+      - content/pages/blog/quantitative-analysis.md
     showDate: true
     showExcerpt: true
     showReadMoreLink: true
@@ -87,15 +93,15 @@ sections:
         height: auto
         width: narrow
         padding:
-          - pt-28
-          - pb-48
+          - pt-12
+          - pb-12
           - pl-4
           - pr-4
         textAlign: left
   - type: ContactSection
     colors: colors-f
     backgroundSize: full
-    title: "Got an interesting project? Tell me more...\U0001F4AC"
+    title: "Let's work together!\U0001F4AC"
     form:
       type: FormBlock
       elementId: sign-up-form
@@ -147,10 +153,62 @@ sections:
           - ml-0
           - mr-0
         padding:
-          - pt-24
-          - pb-24
+          - pt-12
+          - pb-12
           - pr-4
           - pl-4
         flexDirection: row
         textAlign: left
+  - type: FeaturedItemsSection
+    subtitle: 'Connect with me:'
+    colors: colors-f
+    items:
+      - type: FeaturedItem
+        actions:
+          - type: Button
+            label: LinkedIn
+            url: 'https://www.linkedin.com/in/hieu-pham-50a2ab136/'
+            showIcon: true
+            icon: linkedin
+            iconPosition: left
+            style: secondary
+        styles:
+          self:
+            textAlign: center
+      - type: FeaturedItem
+        actions:
+          - type: Button
+            label: GitHub
+            url: 'https://github.com/duchieu260503'
+            showIcon: true
+            icon: github
+            iconPosition: left
+            style: secondary
+        styles:
+          self:
+            textAlign: center
+      - type: FeaturedItem
+        actions:
+          - type: Button
+            label: Instagram
+            url: 'https://www.instagram.com/canquaca2605/'
+            showIcon: true
+            icon: instagram
+            iconPosition: left
+            style: secondary
+        styles:
+          self:
+            textAlign: center
+    columns: 3
+    spacingX: 120
+    spacingY: 16
+    styles:
+      self:
+        height: auto
+        width: wide
+        padding:
+          - pt-8
+          - pb-8
+          - pl-4
+          - pr-4
 ---

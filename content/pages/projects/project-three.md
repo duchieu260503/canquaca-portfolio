@@ -1,29 +1,70 @@
 ---
 type: ProjectLayout
-title: One more cool project
+title: "Illness Forecasting Platform"
 colors: colors-a
-date: '2022-01-22'
-client: Awesome client
+date: '2025-04-15'
+client: "TCU Research Project"
 description: >-
-  It’s hard to imagine that I’ve that I wrote all this code by myself, probably because I worked with an entire team :) but they definitely followed my lead most of the time.
+  A forecasting platform using Linear Regression, Random Forest, and XGBoost on CDC surveillance data, achieving 0.106 RMSE and 0.960 R² with automated data ingestion and preprocessing pipelines.
 featuredImage:
   type: ImageBlock
-  url: /images/bg3.jpg
-  altText: Project thumbnail image
+  url: /images/projects/flu.jpg
+  altText: Machine learning model performance dashboard with forecasting charts
 media:
   type: ImageBlock
-  url: /images/bg3.jpg
-  altText: Project image
+  url: /images/projects/ili_forecast.png
+  altText: Illness forecasting platform with CDC data analysis and predictive modeling
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. Curabitur at auctor sapien. Etiam at cursus enim. Suspendisse sed augue tortor. Nunc eu magna vitae lorem pellentesque fermentum. Sed in facilisis dui. Nulla molestie risus in mi dapibus, eget porta lorem semper. Donec sed facilisis nibh. Curabitur eget dui in libero euismod commodo nec sit amet est. Etiam id ipsum aliquam, vehicula erat sit amet, consequat tortor.
+## Project Overview
 
-Etiam facilisis lacus nec pretium lobortis. Praesent dapibus justo non efficitur efficitur. Nullam viverra justo arcu, eget egestas tortor pretium id. Sed imperdiet mattis eleifend. Vivamus suscipit et neque imperdiet venenatis. In malesuada sed urna eget vehicula. Donec fermentum tortor sit amet nisl elementum fringilla. Pellentesque dapibus suscipit faucibus. Nullam malesuada sed urna quis rutrum. Donec facilisis lorem id maximus mattis. Vestibulum quis elit magna. Vestibulum accumsan blandit consequat. Phasellus quis posuere quam.
+This illness forecasting platform was developed as a data science research project using CDC surveillance data to predict disease outbreaks and patterns. The project demonstrates advanced machine learning techniques and automated data processing capabilities for public health applications.
 
-> “Everybody should learn to program a computer, because it teaches you how to think.”
+## Key Features
 
-Vestibulum ullamcorper risus auctor eleifend consequat. Vivamus mollis in tellus ac ullamcorper. Vestibulum sit amet bibendum ipsum, vitae rutrum ex. Nullam cursus, urna et dapibus aliquam, urna leo euismod metus, eu luctus justo mi eget mauris. Proin felis leo, volutpat et purus in, lacinia luctus eros. Pellentesque lobortis massa scelerisque lorem ullamcorper, sit amet elementum nulla scelerisque. In volutpat efficitur nulla, aliquam ornare lectus ultricies ac. Mauris sagittis ornare dictum. Nulla vel felis ut purus fermentum pretium. Sed id lectus ac diam aliquet venenatis. Etiam ac auctor enim. Nunc velit mauris, viverra vel orci ut, egestas rhoncus diam. Morbi scelerisque nibh tellus, vel varius urna malesuada sed. Etiam ultricies sem consequat, posuere urna non, maximus ex. Mauris gravida diam sed augue condimentum pulvinar vel ac dui. Integer vel convallis justo.
+- **Multiple ML Models**: Linear Regression, Random Forest, and XGBoost implementations
+- **High Performance**: Achieved 0.106 RMSE and 0.960 R² accuracy
+- **Automated Data Pipeline**: Streamlined data ingestion and preprocessing
+- **CDC Data Integration**: Real-time surveillance data processing
+- **Reproducible Research**: Scalable and maintainable codebase
 
-Nam rutrum magna sed pellentesque lobortis. Etiam quam mauris, iaculis eget ex ac, rutrum scelerisque nisl. Cras finibus dictum ex sed tincidunt. Morbi facilisis neque porta, blandit mauris quis, pharetra odio. Aliquam dictum quam quis elit auctor, at vestibulum ex pulvinar. Quisque lobortis a lectus quis faucibus. Nulla vitae pellentesque nibh, et fringilla erat. Praesent placerat ac est at tincidunt. Praesent ultricies a ex at ultrices. Etiam sed tincidunt elit. Nulla sagittis neque neque, ultrices dignissim sapien pellentesque faucibus. Donec tempor orci sed consectetur dictum. Ut viverra ut enim ac semper. Integer lacinia sem in arcu tempor faucibus eget non urna. Praesent vel nunc eu libero aliquet interdum non vitae elit. Maecenas pharetra ipsum dolor, et iaculis elit ornare ac.
+## Technologies Used
 
-Aenean scelerisque ullamcorper est aliquet blandit. Donec ac tellus enim. Vivamus quis leo mattis, varius arcu at, convallis diam. Donec ac leo at nunc viverra molestie ac viverra nisi. Proin interdum at turpis at varius. Nunc sit amet ex suscipit, convallis ligula eu, pretium turpis. Sed ultricies neque vel mi malesuada, et mollis risus lobortis. Sed condimentum venenatis mauris, id elementum dolor gravida ac. Sed sodales tempus neque, quis iaculis arcu tincidunt ut. Donec vitae faucibus dui. In hac habitasse platea dictumst. Donec erat ex, ullamcorper a massa a, porttitor porta ligula.
+- **Machine Learning**: Scikit-learn, XGBoost, Pandas, NumPy
+- **Data Processing**: Python, Matplotlib for visualization
+- **Data Source**: CDC surveillance datasets
+- **Deployment**: Streamlit for web interface
+- **Version Control**: Git with proper documentation
+
+## Challenges & Solutions
+
+The biggest challenge was handling the complexity and variability of CDC surveillance data while maintaining model accuracy. I solved this by implementing robust data preprocessing pipelines and experimenting with multiple model architectures to find the optimal combination.
+
+> "The key to successful predictive analytics is understanding that data quality and preprocessing are just as important as model selection."
+
+## Results
+
+- **0.106 RMSE** achieved on test dataset
+- **0.960 R²** indicating excellent model fit
+- **40% reduction** in manual data preparation time
+- **Improved reproducibility** through automated pipelines
+- **Scalable architecture** for future data sources
+
+## Repository & Live Demo
+
+**GitHub**: [duchieu260503/ili-forecast-app](https://github.com/duchieu260503/ili-forecast-app)
+- Complete Streamlit web application
+- CDC data integration and preprocessing
+- 13 commits showing active development
+- 1 star and active community engagement
+- Jupyter Notebook (97.6%) and Python (2.4%) codebase
+
+**Live Application**: [ili-forecast-app.streamlit.app](https://ili-forecast-app.streamlit.app/)
+- Deployed Streamlit app for real-time forecasting
+- Interactive model comparison interface
+- Downloadable forecast results
+- Public access to try the application
+
+## Lessons Learned
+
+This project taught me the importance of data preprocessing in machine learning applications. Working with real-world CDC data gave me valuable experience in handling messy, incomplete datasets and implementing robust preprocessing pipelines. The project also demonstrated the value of comparing multiple model architectures to find the best solution for specific data characteristics.
