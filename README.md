@@ -1,53 +1,112 @@
-# Netlify Developer Portfolio Starter (auto-annotated)
+# Hieu Pham – Portfolio (Next.js + Tailwind)
 
-![Developer Portfolio](https://assets.stackbit.com/docs/personal-nextjs-starter-thumb.png)
+A clean, dark-themed personal portfolio built with Next.js and Tailwind CSS. Content is managed via Markdown/JSON in the `content/` directory and media in `public/`.
 
-This is a full-fledged portfolio website built with Next.js, Tailwind CSS, [visual editor](https://docs.netlify.com/visual-editor/overview/) and the [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
+## Features
 
-The codebase showcases **how to apply annotations at scale**, meaning: how to make much of your components [highlightable in the visual editor](https://docs.netlify.com/visual-editor/visual-editing/inline-editor/) through data attributes without manually adding code throughout the codebase.
+- Dark theme with accessible typography
+- Interactive tech stack buttons linking to official sites
+- Blog and Projects with featured images/media
+- Pretty code snippets with simplified dark styling
+- Project recommendation carousel (always 2, circular)
+- Downloadable CV/Cover Letter buttons
+- Social icon buttons (LinkedIn, GitHub, Instagram)
 
-**This is achieved by:**
+## Tech Stack
 
-1. Adding an annotation property to the content objects at they're loaded (see `src/utils/content.ts`)
-1. When rendering the page, each content sub-object is dynamically matched to the appropriate component. At this point, wrap each component with an annotation, based on the abovementioned content property. See `src/components/components-registry.tsx`.
+- Next.js 15, React
+- TypeScript (components), JavaScript (some pages)
+- Tailwind CSS + custom CSS (`src/css/main.css`)
+- Markdown/YAML content files under `content/`
 
-**⚡ Demo:** [auto-annotated-portfolio.netlify.app](https://auto-annotated-portfolio.netlify.app)
+## Getting Started (Local Dev)
 
-## Deploying to Netlify
+```bash
+# Install dependencies
+npm install
 
-If you click "Deploy to Netlify" button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/auto-annotated-portfolio)
-
-## Getting Started
-
-The typical development process is to begin by working locally. Clone this repository, then run `npm install` in its root directory.
-
-Run the Next.js development server:
-
-```txt
-cd auto-annotated-portfolio
+# Start dev server
 npm run dev
+# http://localhost:3000
+
+# Build for production
+npm run build
+
+# Start production server (after build)
+npm start
 ```
 
-Install the [Netlify visual editor CLI](https://www.npmjs.com/package/@stackbit/cli). Then open a new terminal window in the same project directory and run the Netlify visual editor dev server:
+## Project Structure
 
-```txt
-npm install -g @stackbit/cli
-stackbit dev
-```
+- `content/pages/index.md` – Home page (hero, buttons, featured sections)
+- `content/pages/info.md` – About page (bio, technologies, skills, social)
+- `content/pages/blog/` – Blog posts (`.md`) with frontmatter-like blocks
+- `content/pages/projects/` – Project pages (`.md`) with images/media
+- `content/data/config.json` – Global config (header, social links)
+- `public/images/` – All images (blog, projects, tech logos)
+- `public/files/` – CV and Cover Letter PDFs
+- `src/css/main.css` – Theme and code snippet styling
+- `src/utils/static-props-resolvers.ts` – Data resolvers (project prev/next)
 
-This outputs your own Netlify visual editor URL. Open this, register or sign in, and you will be directed to Netlify's visual editor for your new project.
+## Editing Content
 
-![Next.js Dev + Netlify visual editor dev](https://assets.stackbit.com/docs/next-dev-stackbit-dev.png)
+### Home
+- Edit `content/pages/index.md`.
+- Hero buttons IDs: `cv-download-btn`, `projects-btn`, `blogs-btn`.
+- “Connect with me” icon buttons live in the bottom `FeaturedItemsSection`.
 
-## Next Steps
+### About
+- Edit `content/pages/info.md`.
+- Technologies section uses responsive button grid with official icons.
+- Skills use a concise list (Agile/TDD/CI-CD/etc.).
+- Social icon buttons are in a `FeaturedItemsSection` titled “You can find me here:”.
 
-Here are a few suggestions on what to do next if you're new to Netlify Visual Editor:
+### Blog Posts
+- Add files under `content/pages/blog/your-post.md`.
+- Set `featuredImage` and optional `media` (use `/images/blog/...`).
+- Code blocks are auto-styled by `src/css/main.css`.
 
-- Learn [how Netlify Visual Editor works](https://docs.netlify.com/visual-editor/overview/)
-- Check [Netlify visual editor reference documentation](https://visual-editor-reference.netlify.com/)
+### Projects
+- Add files under `content/pages/projects/your-project.md`.
+- Set `featuredImage` and optional `media` (supports `ImageBlock` or `VideoBlock`).
+- GitHub/live links can be added in Markdown sections.
 
-## Support
+## Images & Files
 
-If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
+- Blog images: `public/images/blog/`
+- Project images/videos: `public/images/projects/`
+- Tech logos (SVG): `public/images/tech-*.svg`
+- CV/Cover Letter PDFs: `public/files/Hieu_Pham_CV.pdf`, `public/files/Hieu_Pham_Cover_Letter.pdf`
+
+Update references in the content files with absolute paths, e.g. `/images/blog/swe.jpg`.
+
+## Theming & Code Styling
+
+- Global styles: `src/css/main.css`
+- Code blocks use a simple black background with bright, legible syntax colors.
+- Buttons use subtle glass/gradient styles to fit the dark theme.
+
+## Project Recommendations (Prev/Next)
+
+Circular recommendation logic is implemented in `src/utils/static-props-resolvers.ts` to always show two projects (wraps at start/end).
+
+## Social Links
+
+- Navbar/social: `content/data/config.json`
+- Page-level icon buttons: `content/pages/index.md` and `content/pages/info.md`
+
+## Deployment
+
+This repo includes `netlify.toml`. Typical options:
+
+### Netlify
+- Build command: `npm run build`
+- Publish directory: `.next`
+- Framework: Next.js (Netlify will detect and use the Next.js Runtime)
+
+### Vercel
+- Import the GitHub repo in Vercel and deploy (no extra config needed).
+
+## License
+
+Personal project – all rights reserved unless otherwise specified.
