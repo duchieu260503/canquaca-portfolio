@@ -1,6 +1,7 @@
 ---
 type: PageLayout
 title: Home
+metaTitle: Portfolio | Hieu Pham
 colors: colors-f
 # Clean, minimal background
 sections:
