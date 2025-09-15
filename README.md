@@ -1,5 +1,7 @@
 # Hieu Pham – Portfolio (Next.js + Tailwind)
 
+Live site: https://canquaca.netlify.app/
+
 A clean, dark-themed personal portfolio built with Next.js and Tailwind CSS. Content is managed via Markdown/JSON in the `content/` directory and media in `public/`.
 
 ## Features
@@ -63,7 +65,7 @@ npm start
 
 ### Blog Posts
 - Add files under `content/pages/blog/your-post.md`.
-- Set `featuredImage` and optional `media` (use `/images/blog/...`).
+- Set `featuredImage` and optional `media` (use `/images/blog/`).
 - Code blocks are auto-styled by `src/css/main.css`.
 
 ### Projects
