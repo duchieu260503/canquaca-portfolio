@@ -2,7 +2,7 @@
 type: PostLayout
 title: "Building Scalable Web Applications: A Full-Stack Developer's Guide 🌐"
 colors: colors-f
-date: '2024-12-10'
+date: '2025-02-10'
 author: content/data/team/doris-soto.json
 excerpt: >-
   Learn how to build modern, scalable web applications using cutting-edge technologies. From frontend frameworks to backend architecture, discover the tools and techniques that power today's web.

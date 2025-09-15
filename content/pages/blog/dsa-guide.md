@@ -2,7 +2,7 @@
 type: PostLayout
 title: "Mastering Data Structures & Algorithms: A Developer's Journey 🚀"
 colors: colors-f
-date: '2024-12-10'
+date: '2025-01-20'
 author: content/data/team/doris-soto.json
 excerpt: >-
   Dive deep into the world of data structures and algorithms. Learn essential concepts, implementation patterns, and optimization techniques that every developer needs to know.

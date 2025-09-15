@@ -2,7 +2,7 @@
 type: PostLayout
 title: "Quantitative Analysis: Turning Data into Strategic Insights 📊"
 colors: colors-f
-date: '2024-12-10'
+date: '2025-03-05'
 author: content/data/team/doris-soto.json
 excerpt: >-
   Explore the power of quantitative analysis in modern business and technology. Learn statistical methods, data visualization techniques, and how to extract meaningful insights from complex datasets.
